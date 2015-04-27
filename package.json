@@ -1,0 +1,43 @@
+{
+  "name": "smashing_marionette_chap2",
+  "description": "",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Chris Lee",
+  "homepage": "",
+  "contributors": [
+    "Christopher Lee <lee.christophermark@gmail.com> (https://github.com/chrismlee)"
+  ],
+  "dependencies": {},
+  "browserify": {
+    "transform": [
+      "hbsfy"
+    ]
+  },
+  "devDependencies": {
+    "backbone": "^1.1.2",
+    "backbone-pouch": "^1.4.0",
+    "backbone.marionette": "^2.4.1",
+    "backbone.syphon": "^0.6.0",
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-util": "^3.0.4",
+    "handlebars": "^3.0.0",
+    "hbsfy": "^2.2.1",
+    "jquery": "^2.1.3",
+    "pouchdb": "^3.4.0",
+    "underscore": "^1.8.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
+  },
+  "keywords": [],
+  "repository": "",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ]
+}
