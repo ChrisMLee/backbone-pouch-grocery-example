@@ -32,6 +32,6 @@ module.exports = Marionette.ItemView.extend({
   },
   toggleChecked: function() {
     console.log("TWAS CLICKED -", this.model.get('purchased'));
-    return this.model.set('purchased', !this.model.get('purchased'));
+    return this.model.save('purchased', !this.model.get('purchased'));
   }
 })

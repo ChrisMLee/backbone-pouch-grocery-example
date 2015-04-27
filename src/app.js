@@ -7,12 +7,6 @@ var Marionette = require('backbone.marionette');
 var BackbonePouch = require('backbone-pouch');
 var PouchDB = require('pouchdb');
 
-Backbone.sync = BackbonePouch.sync({
-    // We currently suffix by the PouchDB version here
-    // because at the moment PouchDB does not support upgrade
-    db: new PouchDB('grocery-app')
-});
-
 var ItemCollectionView = require('./groceries/itemCollectionView');
 var ItemCollection = require('./groceries/itemCollection');
 
@@ -21,6 +15,12 @@ var AppNavView = require('./app/appNavView');
 
 
 $(function() {
+  Backbone.sync = BackbonePouch.sync({
+    db: new PouchDB('grocery-app')
+  });
+
+  Backbone.Model.prototype.idAttribute = '_id';
+
   var GroceryList = new ItemCollection();
 
   var onSuccess = function(collection, response, options){
@@ -43,11 +43,5 @@ $(function() {
   region.show(groceryCollectionView);
 
   region2.show(appNavView);
-
-
-  //setTimeout(function(){GroceryList.add({title: "bananas", price: 3}); }, 3000);
-  // console.log( "the selector", $('h1').html());
-  // console.log(_.VERSION);
-  // _.each([7,8], alert);
 
 });
